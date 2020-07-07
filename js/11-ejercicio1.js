@@ -2,7 +2,7 @@
 
 /*
 programa que pida al usuario 2 numeros, se debe determinar cual es mayor, 
-menor o si son iguales
+menor o si son iguales.
 NOTA: Si los datos ingresados no son numero, se deben solicitar nuevamente
 */
 
