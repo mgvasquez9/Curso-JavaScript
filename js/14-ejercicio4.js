@@ -1,6 +1,6 @@
 'use strict'
 /*mostrar todos los numero impares que existan entre 2 numeros 
-ingresados por el usuario*/
+ingresados por el usuario.*/
 console.log("Ejercicio 4")
 
 do{
