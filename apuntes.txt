@@ -1,0 +1,5 @@
+localizarse en el repositorio
+verificar el estado: git status
+agregar/remiver archivos: git add .  // git add nombreArchivo
+guardar cambios: git commit -m" " // -m=mensaje
+enviar el repositorio git push -u origin master
