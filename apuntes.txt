@@ -3,3 +3,15 @@ verificar el estado: git status
 agregar/remiver archivos: git add .  // git add nombreArchivo
 guardar cambios: git commit -m" " // -m=mensaje
 enviar el repositorio git push -u origin master
+
+
+crear una rama
+git branch nombreRama
+
+cambiar a una rama
+git checkout nombreRama
+
+luego de trabajar en una rama se debe realizar el merge para inificar los cambios de
+la rama con el el master o trunk
+para lo cual se debe posicionar en el master
+git checkout master
