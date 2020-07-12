@@ -1,3 +1,5 @@
+posicionarse en el repositorio 
+git remote add origin https://github.com/mgvasquez9/prueba.git
 localizarse en el repositorio
 verificar el estado: git status
 agregar/remiver archivos: git add .  // git add nombreArchivo
@@ -15,3 +17,6 @@ luego de trabajar en una rama se debe realizar el merge para inificar los cambio
 la rama con el el master o trunk
 para lo cual se debe posicionar en el master
 git checkout master
+
+eliminar una branch
+git d nombreRama
