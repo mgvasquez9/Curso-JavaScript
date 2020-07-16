@@ -20,3 +20,5 @@ git checkout master
 
 eliminar una branch
 git d nombreRama
+
+//Este comentario debe generar un conflito
