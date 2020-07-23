@@ -1,0 +1,66 @@
+ Hdatfmt(*iso) datedit(*ymd/)
+      **********************************************************************
+      *
+      *  Object ID  : MPGPRUEBA
+      *
+      *  Date       : 17 Julio 2020
+     fPRESTAMOS if   e           K disK
+     
+      *   Definicion de parametros utilizados en el programa
+     DMPGPRUEBA	       pr                  extpgm('MPGPRUEBA')
+     d p_nprestadmo	                 12  0
+     d MPCAR002R1					  5  0
+     DMPGPRUEBA	       pi
+     d p_nprestadmo	                 12  0
+     d p_diasMora					  5  0
+     * Variables de Trabajo
+     d nprestadmo	   s             12  0
+     d diasMora        s              5  0
+     
+
+    /free
+    exsr inicio ;
+    *inlr = *on ;
+
+    begsr incio ;
+     nprestadmo = p_nprestadmo;
+     exsr consultaPresamo;
+     p_diasMora = diasMora ;
+    endsr;
+
+    begsr consultaPrestamo;
+    	diasMora = 0;
+    	exec sql
+    		select max(DLSMOR)
+    		into :diasMora
+    		from PRESTAMOS
+    		where DLSACC = nprestadmo ;
+
+    endsr;
+    /end-free
+
+
+   Hdatfmt(*iso) datedit(*ymd/)
+      **********************************************************************
+      *
+      *  Object ID  : inicio
+      *
+      *  Date       : 17 Julio 2020
+     
+     
+      *  Definicion Parametros Para Llamado de Programas
+     d MPGPRUEBA       pr                  extpgm('MPGPRUEBA')
+     d p_credito                     12  0
+     d p_moram                        5  0
+
+     
+     d v_credito       s             12  0
+     d v_diasMora      s              5  0
+
+     /free
+     	v_credito = 123456789;
+     	v_diasMora = 0;
+       callp MPCAR002R1(v_credito : v_diasMora);
+       *inlr = *on ;
+      /end-free
+
